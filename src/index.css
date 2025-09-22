@@ -1,0 +1,357 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url('http://localhost:1488/images/pageBackground/star-wars-background.webp');
+    height: 100vh;
+}
+
+html {
+    font-size: 16px;
+}
+
+.star-wars-header {
+    padding: 0.5rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+@font-face {
+    font-family: 'StarJedi';
+    src: url('/fonts/Starjedi.ttf');
+}
+.star-wars-heading {
+    font-family: 'StarJedi';
+    margin: 0rem;
+    font-size: 2rem;
+    line-height: 1.6rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgb(28, 30, 30);
+}
+
+.header-navigation {
+    display: none;
+}
+
+.header-navigation-buttons {
+    font-family: "segoe ui", sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.sw-on-disney {
+    font-family: "segoe ui";
+    color: rgb(250, 199, 89);
+    font-size: 1rem;
+}
+
+main {
+    background-color: black;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.search-databank {
+    display: flex;
+    background-color: rgb(28, 30, 30);
+    border-radius: 7px;
+    cursor: text;
+}
+
+.search-bar {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    flex-grow: 1;
+    line-height: 4rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    align-items: center;
+}
+
+.search-bar::placeholder {
+    font-family: 'Segoe UI';
+    color: rgb(185, 185, 185);
+    text-indent: 0.4rem;
+    padding-bottom: 0.5rem;
+}
+
+.search-bar:placeholder-shown{
+    text-indent: 6px;
+}
+
+.search-bar:focus {
+    outline: none;
+    caret-color: white;
+    caret-shape:block;
+    text-indent: 6px;
+}
+
+.search-button {
+    display: flex;
+    font-family: "segoe ui";
+    font-size: 1rem;
+    font-weight: 650;
+    background-color: transparent;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    padding-right: 1rem;
+    align-items: center;
+}
+
+.search-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.search-button-text {
+    display: none;
+}
+
+.search-button:hover svg{
+    filter: drop-shadow(0 0 5px rgb(229, 229, 160));
+}
+
+
+.cards-section{
+    margin-top: 2rem;
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.scroll-back-button {
+    content: '';
+    position: absolute;
+    left: 0rem;
+    top: 50%;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+
+.cards-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+}
+
+.cards-header-name {
+    font-family: "segoe ui";
+    font-size: 1.4rem;
+    color: white;
+    margin: 0px;
+    font-weight: 550;
+}
+
+.cards-see-all {
+    font-family: "segoe ui";
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.cards-row {
+    display: flex;
+    margin-top: 1.5rem;
+    gap: 2rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    max-width: fit-content;
+    text-decoration: none;
+    display: inline;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis:content;
+    scroll-snap-align: center;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+}
+
+.card-description {
+    color: white;
+    font-family: "segoe ui";
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    background-color: rgb(31, 31, 31);
+    position: relative;
+
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 86% 100%, 82% 88%, 54% 88%, 50% 100%, 0 100%);
+}
+
+.indicator {
+    position: relative;
+}
+
+.indicator::before {
+    content: '';
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: white;
+    width: 24px;
+    height:4px;
+    background-color: grey;
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.indicator::after {
+    content: '';
+    top: 0px;
+    left: 27px;
+    position: absolute;
+    background-color: white;
+    width: 4px;
+    height:4px;
+    background-color: grey;
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover .indicator::before,
+.card:hover .indicator::after {
+    background-color: white;
+    box-shadow: 0 0 8px #fff;
+}
+
+.scroll-forward-button {
+    content: '';
+    position: absolute;
+    right: 0rem;
+    top: 50%;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+@media (min-width:768px) and (max-width: 991.98px) {
+    .card {
+        flex: 0 0 calc((100% - 4rem) / 3);
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .star-wars-header {
+        padding: 1.5rem;
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+
+    .star-wars-heading {
+        font-family: 'StarJedi', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin: 0px;
+        padding: 0px;
+        font-size: 4rem;
+        line-height: 3rem;
+        border-bottom: none;
+    }
+
+    .header-navigation {
+        display: flex;
+        justify-content: center;
+        padding-top: 45px;
+        padding-bottom: 10px;
+        gap: 45px;
+        border-bottom: 1px solid rgba(172, 172, 172, 0.548);
+    }
+
+    .search-button {
+        cursor: pointer;
+        display: flex;
+        font-family: "segoe ui";
+        font-size: 15px;
+        font-weight: 650;
+        background-color: transparent;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        padding-right: 2rem;
+        align-items: center;
+    }
+
+    .search-button-text {
+        display: inline;
+    }
+
+    .search-button svg {
+        width: 16px;
+        height: 16px;
+        padding-right: 0.8rem;
+    }
+
+    main {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .cards-section {
+    margin: 2rem;
+    }
+
+    .cards-row {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    }
+
+    .card {
+    text-decoration: none;
+    display: inline;
+    border-radius: 6px;
+    overflow: hidden;
+    flex: 0 0 calc((100% - 8rem) / 5);
+    aspect-ratio: 3/4;
+    }
+
+    .card img {
+    display: block;
+    width: 100%;
+    }
+
+    .card-description {
+    color: white;
+    font-family: "segoe ui";
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    background-color: rgb(31, 31, 31);
+    position: relative;
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 92% 100%, 86% 88%, 64% 88%, 58% 100%, 0 100%);
+    }
+
+    .scroll-back-button {
+    top: 35%;
+}
+
+    .scroll-forward-button {
+    top: 35%;
+    }
+}
