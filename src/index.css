@@ -161,6 +161,7 @@ main {
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .card {
