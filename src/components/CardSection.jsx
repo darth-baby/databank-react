@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react';
 import Card from './Card';
 
-const API_BASE_URL = 'http://localhost:1488';
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function CardSection({ title, endpoint }) {
     const [characters, setCharacters] = useState([]); // состояние для хранения персонажей
@@ -68,7 +68,7 @@ function CardSection({ title, endpoint }) {
     }
 
     return (
-        <section className = "cards-section" id = "DATABANK | Andor"> 
+        <section className = "cards-section"> 
 
                 {backButtonVisibility && <button className = "scroll-back-button" onClick = {handleClickBack}></button>}
 

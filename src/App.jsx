@@ -38,6 +38,9 @@ function App() {
             </form>
 
             <CardSection title = "Databank | Andor" endpoint = "/api/characters/andor" />
+            <CardSection title = "Databank | Roque One" endpoint = "/api/characters/roqueOne"/>
+            <CardSection title = "Databank | The Mandalorian" endpoint = "/api/characters/mandalorian"/>
+            <CardSection title = "Databank | Ahsoka" endpoint = "/api/characters/ahsoka"/>
         </main> 
     </div>
   );
