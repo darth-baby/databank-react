@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-image: url('http://localhost:1488/images/pageBackground/star-wars-background.webp');
+    background-image: url('/images/background/star-wars-background.webp');
     height: 100vh;
 }
 
