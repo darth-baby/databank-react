@@ -74,7 +74,7 @@ function CardSection({ title, endpoint }) {
 
                 <header className = "cards-section-header">
                     <h2 className = "cards-header-name">Databank | Andor</h2>
-                    <a href = "#" className = "cards-see-all">SEE ALL ></a>
+                    <a href = "#" className = "cards-see-all">SEE ALL {'>'}</a>
                 </header>
                 <div className = "cards-row" ref = {cardsRowRef} onScroll = {updateButtonVisibility}>
                     {characters.map((character) => (
