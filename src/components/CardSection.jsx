@@ -30,7 +30,8 @@ function CardSection({ title, endpoint }) {
 
         function handleForwardButtonsVisibility() {
             const positionInfo = getCurrentPosition()
-            if (positionInfo.currentPosition + positionInfo.visibleWidth === positionInfo.wholeWidth) {
+            const scrolledToEnd = Math.abs(positionInfo.currentPosition + positionInfo.visibleWidth - positionInfo.wholeWidth) < 1;
+            if (scrolledToEnd) {
                 setForwardButtonVisibility(false)
             }
             else {
