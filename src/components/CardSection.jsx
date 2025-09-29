@@ -74,7 +74,7 @@ function CardSection({ title, endpoint }) {
                 {backButtonVisibility && <button className = "scroll-back-button" onClick = {handleClickBack}></button>}
 
                 <header className = "cards-section-header">
-                    <h2 className = "cards-header-name">Databank | Andor</h2>
+                    <h2 className = "cards-header-name">{title}</h2>
                     <a href = "#" className = "cards-see-all">SEE ALL {'>'}</a>
                 </header>
                 <div className = "cards-row" ref = {cardsRowRef} onScroll = {updateButtonVisibility}>
